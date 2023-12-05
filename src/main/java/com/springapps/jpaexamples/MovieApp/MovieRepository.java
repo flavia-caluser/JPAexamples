@@ -8,5 +8,6 @@ import java.util.Set;
 
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
-    public List<Movie> findAllByFranciseId(Long franciseId);
+    public List<Movie> findAllByFrancise_Id(Long franciseId);
+
 }

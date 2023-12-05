@@ -29,12 +29,7 @@ public class MovieService {
     }
 
     @Transactional
-    public Movie addCharacterToMovie(Movie movie, Long franciseId) {
-        List<Movie> movieList = movieRepository.findAllByFranciseId(franciseId);
-        if (movieList.isEmpty()) {
-            throw new EntityNotFoundException("Movie list not found for that Id");
-        }
-        movieList.add(movie);
+    public Movie addMovie(Movie movie) {
         return movieRepository.save(movie);
     }
 
